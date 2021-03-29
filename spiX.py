@@ -28,7 +28,7 @@ def readSpi(adr):
 def writeSpi(adr, data):
     cs.low()
     time.sleep(0.01)
-    adr = adr & 0x80
+    adr = adr | 0x80
     msg = bytearray([adr,data])
     spi.write(msg)
     cs.high()
