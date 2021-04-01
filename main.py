@@ -2,38 +2,35 @@
 
 from machine import SPI, Pin
 from rfm import printBW, printCodingRates, printSF
-import time, rfm, utime
+import time, rfm, utime, os
 
 g0 = Pin(14, Pin.IN)
+g0.irq(lambda pin: rx(), Pin.IRQ_RISING)
 logName = "log"
 txCount = 0
 
 rfm.init()
 
 def getCurTime():
-    curTime = str(utime.localtime()[3]) + ":" + str(utime.localtime()[4]) + ":" + str(utime.localtime()[5])
+    curTime = '{:02d}:{:02d}:{:02d}'.format(utime.localtime()[3], utime.localtime()[4], utime.localtime()[5])
     return curTime + " - "
 
 def logEntry(entry):
     with open(logName + ".txt", 'a') as logFile:
-        logFile.write("  " + getCurTime() + entry)
+        logFile.write("  " + getCurTime() + entry + "\n")
 
 def tx(data):
     global g0
     rfm.txData(data)
+    g0.irq(lambda pin: txDone(), Pin.IRQ_RISING)
 
-    while g0.value() != 1:
-        time.sleep(0.001)
-    logEntry("Transmitted " + str(len(data)) + " bytes successfully")
+def txDone():
+    logEntry("Transmitted bytes successfully")
     print("TX DONE")
+    rfm.rxMode()
+    g0.irq(lambda pin: rx(), Pin.IRQ_RISING)
 
 def rx():
-    global g0
-    rfm.rxMode()
-    
-    print("Waiting for LoRa message")
-    while g0.value() != 1:
-        time.sleep(0.001)
     print("RX DONE")
     
     data = rfm.readPackets()
@@ -41,12 +38,13 @@ def rx():
     rssi = rfm.getRSSI()
     print("RSSI:", rssi)
     logEntry("Received: " + str(data))
+    logEntry("  RSSI: " + str(rssi))
 
 def startLog(usrLogName):
     global logName
     logName = usrLogName
     with open(logName + ".txt", 'a') as logFile:
-        logFile.write(getCurTime() + "New Log Started: " + usrLogName)
+        logFile.write(getCurTime() + "~~New Log Started: " + usrLogName  + "~~\n")
 
 def sendTest():
     global txCount
