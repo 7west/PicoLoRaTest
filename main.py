@@ -15,7 +15,7 @@ txLength = 0
 def intro():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Welcome to LoRa Test. These are the available functions:")
-    print("printBW(), printCodingRates(), printSF(), setBW(), setCodingRate(), setSF(), setPout(), setBoostPower(bool)")
+    print("printBW(), printCodingRates(), printSF(), setBW(), setCodingRate(), setSF(), setPout(), setBoostPower(bool), defaultConfig(), rangeConfig(), speedConfig()")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 rfm.init()
@@ -97,4 +97,36 @@ def setPout(pout):
 
 def setBoostPower(bp):
     rfm.setBoostPower(bp)
+    logConfig()
+
+def defaultConfig():
+    rfm.setBW(125)
+    rfm.setCodingRate(5)
+    rfm.setSF(7)
+    rfm.setPout(17)
+    rfm.setBoostPower(False)
+    logConfig()
+
+def rangeConfig1():
+    rfm.setBW(41.7)
+    rfm.setCodingRate(8)
+    rfm.setSF(12)
+    rfm.setPout(17)
+    rfm.setBoostPower(False)
+    logConfig()
+
+def rangeConfig2():
+    rfm.setBW(7.8)
+    rfm.setCodingRate(8)
+    rfm.setSF(12)
+    rfm.setPout(17)
+    rfm.setBoostPower(False)
+    logConfig()
+
+def fastConfig():
+    rfm.setBW(500)
+    rfm.setCodingRate(5)
+    rfm.setSF(6)
+    rfm.setPout(17)
+    rfm.setBoostPower(False)
     logConfig()

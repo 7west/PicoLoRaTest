@@ -104,6 +104,8 @@ def txData(data):
     
 
 def init():
+    _rst.low()
+    time.sleep(0.1)
     _rst.high()
     time.sleep(0.1)
 
