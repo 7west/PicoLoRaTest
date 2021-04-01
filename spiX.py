@@ -17,7 +17,7 @@ cs.high()  # running this script multiple times requires cs high
            # cs high ends the transaction and lets you read 
            # any byte after, without it, we read the next address
 
-def readSpi(adr):
+def read(adr):
     cs.low()
     time.sleep(0.01)
     data = bytearray([0x00,0x00])
@@ -25,10 +25,26 @@ def readSpi(adr):
     cs.high()
     return data[1]
 
-def writeSpi(adr, data):
+def burstRead(adr, len):
+    cs.low()
+    time.sleep(0.01)
+    spi.write(bytes([adr]))
+    dataRead = spi.read(len,0x00)
+    cs.high()
+    return dataRead
+
+def write(adr, data):
     cs.low()
     time.sleep(0.01)
     adr = adr | 0x80
     msg = bytearray([adr,data])
+    spi.write(msg)
+    cs.high()
+
+def burstWrite(adr, msg):
+    cs.low()
+    time.sleep(0.01)
+    adr = bytearray([adr | 0x80])
+    msg = adr + msg
     spi.write(msg)
     cs.high()
