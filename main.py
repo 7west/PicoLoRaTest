@@ -15,7 +15,7 @@ txLength = 0
 def intro():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Welcome to LoRa Test. These are the available functions:")
-    print("printBW(), printCodingRates(), printSF(), setBW(), setCodingRate(), setSF(), setPout(), setBoostPower(bool), defaultConfig(), rangeConfig(), speedConfig()")
+    print("  printBW(), printCodingRates(), printSF(), setBW(), setCodingRate(),\n  setSF(), setPout(), setBoostPower(bool),\n  defaultConfig(), rangeConfig(), speedConfig()")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 rfm.init()
