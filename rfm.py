@@ -10,6 +10,8 @@ _currentBW = 125
 _codingRateDict = {5 : 0x1, 6 : 0x2, 7 : 0x3, 8 : 0x4}
 _currentCodingRate = 5
 _currentSF = 7
+_currentPower = 17
+_currentBP = False
 M_STDBY = 0x01
 M_SLEEP = 0x00
 M_LORA = 0x80
@@ -41,15 +43,18 @@ def setModemConfig2():
     config = (_currentSF << 4) | (0x4)
     spiX.write(0x1E, config)
 
-def setOutputPower(pout):
+def setPout(pout):
+    global _currentPower
     if pout >= 2 or pout <= 17:
         outPow = pout - 2
         spiX.write(0x09, 0x80 | outPow)
+        _currentPower = pout
     else:
         print("ERROR: Power not changed")
         print("Power must be between +2dBm and +17dBm")
 
-def boostPower(bp):
+def setBoostPower(bp):
+    _currentBP = bp
     if bp == False:
         spiX.write(0x4D, 0x84)
     else:
@@ -94,8 +99,9 @@ def txData(data):
     spiX.burstWrite(0x00, data)  # write payload to LoRa buffer
     spiX.write(0x22, len(data))  # sets payload length
     spiX.write(0x40, 0x40)  # G0 interrupt on TX Done
-    setMode(M_TX)
     spiX.write(0x12, 0xFF)  # clear all interrupt flags
+    setMode(M_TX)
+    
 
 def init():
     _rst.high()
@@ -116,8 +122,8 @@ def init():
     spiX.write(0x06, 0xE4)  # sets freq to 915MHz
     spiX.write(0x07, 0xC0)  # I dont understand the math, but this works
     spiX.write(0x08, 0x00)
-    boostPower(False)
-    setOutputPower(17)
+    setBoostPower(False)
+    setPout(17)
     spiX.write(0x39, 0x7A)  # sets the sync word
     setMode(M_STDBY)
     time.sleep(0.1)
