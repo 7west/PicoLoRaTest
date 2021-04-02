@@ -115,8 +115,6 @@ def init():
 
     if spiX.read(0x42) != 0x12:
         raise Exception("ERROR: RFM not detected")
-    else:
-        print("RFM95 detected")
     
     setMode(M_LORA)  # LoRa Mode
     time.sleep(0.01)
@@ -135,6 +133,8 @@ def init():
     time.sleep(0.1)
     
     rxMode()
+
+    return True
 
 
 

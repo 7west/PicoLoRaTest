@@ -1,0 +1,31 @@
+00:07:08 - ~~New Log Started: Outdoor Test 1 4-2-21, desk~~
+  00:07:08 - BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+  00:07:33 - BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+  00:10:15 - Received: b'test message #0'
+  00:10:15 -   RSSI: -81
+  00:10:23 - Received: b'test message #1'
+  00:10:23 -   RSSI: -80
+  00:10:29 - Received: b'test message #2'
+  00:10:29 -   RSSI: -82
+  00:10:34 - Received: b'test message #3'
+  00:10:34 -   RSSI: -81
+  00:11:30 - Received: b'test message #4'
+  00:11:30 -   RSSI: -72
+  00:11:38 - Received: b'test message #5'
+  00:11:38 -   RSSI: -74
+  00:11:42 - Received: b'test message #6'
+  00:11:42 -   RSSI: -73
+  00:11:45 - Received: b'test message #7'
+  00:11:45 -   RSSI: -74
+  00:14:22 - Received: b'test message #10'
+  00:14:22 -   RSSI: -103
+  00:14:30 - Received: b'tep\xf4\x93V\x85wCf\xc3b\x1a\x8a12'
+  00:14:30 -   RSSI: -102
+  00:15:18 - Received: b'test message #12'
+  00:15:18 -   RSSI: -103
+  00:15:24 - Received: b'test message #13'
+  00:15:24 -   RSSI: -103
+  00:15:29 - Received: b'test message #14'
+  00:15:29 -   RSSI: -101
+  00:15:34 - Received: b'test message #15'
+  00:15:34 -   RSSI: -102

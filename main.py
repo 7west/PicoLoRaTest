@@ -10,38 +10,45 @@ logName = "log"
 txCount = 0
 txStartTime = 0
 txEndTime = 0
-txLength = 0
+txData = 0
 
 def intro():
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Welcome to LoRa Test. These are the available functions:")
-    print("  printBW(), printCodingRates(), printSF(), setBW(), setCodingRate(),\n  setSF(), setPout(), setBoostPower(bool),\n  defaultConfig(), rangeConfig2(), rangeConfig1(), speedConfig()")
+    print("  printBW(), printCodingRates(), printSF(), setBW(), setCodingRate(),")
+    print("  setSF(), setPout(), setBoostPower(bool),")
+    print("  defaultConfig(), rangeConfig2(), rangeConfig1(), speedConfig()")
+    print("  startLog(), logEntry(), printConfig()")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
-rfm.init()
+if rfm.init():
+    print("RFM initialized")
 intro()
 
 def getCurTime():
     curTime = '{:02d}:{:02d}:{:02d}'.format(utime.localtime()[3], utime.localtime()[4], utime.localtime()[5])
     return curTime + " - "
 
+def logEntryIndent(entry):
+    logEntry("  " + entry)
+
 def logEntry(entry):
     with open(logName + ".txt", 'a') as logFile:
-        logFile.write("  " + getCurTime() + entry + "\n")
+        logFile.write(getCurTime() + entry + "\n")
 
 def tx(data):
-    global g0, txStartTime, txLength
-    txLength = len(data)
+    global g0, txStartTime, txData
+    txData = data
     rfm.txData(data)
     txStartTime = utime.ticks_ms()
     g0.irq(lambda pin: txDone(), Pin.IRQ_RISING)
 
 def txDone():
-    global g0, txStartTime, txEndTime, txLength
+    global g0, txStartTime, txEndTime, txData
 
     txEndTime = utime.ticks_ms()
     txDuration = txEndTime - txStartTime
-    logEntry("Transmitted "+str(txLength)+" bytes, duration = " + str(txDuration) + "ms")
+    logEntryIndent("Transmitted '"+str(txData)+"', duration = " + str(txDuration) + "ms")
     print("TX DONE in " + str(txDuration) + "ms")
     rfm.rxMode()
     g0.irq(lambda pin: rx(), Pin.IRQ_RISING)
@@ -53,8 +60,8 @@ def rx():
     print("DATA:", data)
     rssi = rfm.getRSSI()
     print("  RSSI:", rssi)
-    logEntry("Received: " + str(data))
-    logEntry("  RSSI: " + str(rssi))
+    logEntryIndent("Received: " + str(data))
+    logEntryIndent("  RSSI: " + str(rssi) + "dBm")
 
 def startLog(usrLogName):
     global logName
@@ -74,7 +81,7 @@ def logConfig():
     currentPower = rfm._currentPower
     if currentPower == 17 and rfm._currentBP:
         currentPower = 20
-    logEntry("BW: " + str(rfm._currentBW) +
+    logEntryIndent("BW: " + str(rfm._currentBW) +
                 "kHz, CR: 4/" + str(rfm._currentCodingRate) +
                 ", SF: " + str(rfm._currentSF) + 
                 ", P: " + str(currentPower) + "dBm")

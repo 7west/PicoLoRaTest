@@ -1,0 +1,23 @@
+00:00:33 - ~~New Log Started: Outdoor Test 1 4-2-21, car~~
+  00:00:33 - BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+  00:00:46 - BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+  00:01:15 - inside car, 40m
+  00:01:21 - Transmitted 15 bytes, duration = 395ms - 0
+  00:01:29 - Transmitted 15 bytes, duration = 395ms - 1
+  00:01:35 - Transmitted 15 bytes, duration = 396ms - 2
+  00:01:40 - Transmitted 15 bytes, duration = 396ms - 3
+  00:02:03 - outside car, 40m
+  00:02:36 - Transmitted 15 bytes, duration = 395ms - 4
+  00:02:44 - Transmitted 15 bytes, duration = 395ms - 5
+  00:02:48 - Transmitted 15 bytes, duration = 395ms - 6
+  00:02:51 - Transmitted 15 bytes, duration = 395ms - 7
+  00:05:05 - inside car, leasing office, 140m
+  00:05:15 - Transmitted 15 bytes, duration = 396ms - 8
+  00:05:22 - Transmitted 15 bytes, duration = 396ms - 9
+  00:05:29 - Transmitted 16 bytes, duration = 395ms - 10
+  00:05:36 - Transmitted 16 bytes, duration = 395ms - 11
+  00:06:01 - outside car, leasing office, 140m
+  00:06:24 - Transmitted 16 bytes, duration = 396ms - 12
+  00:06:30 - Transmitted 16 bytes, duration = 396ms - 13
+  00:06:35 - Transmitted 16 bytes, duration = 395ms - 14
+  00:06:40 - Transmitted 16 bytes, duration = 396ms - 15
