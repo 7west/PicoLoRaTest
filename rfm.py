@@ -17,6 +17,7 @@ M_SLEEP = 0x00
 M_LORA = 0x80
 M_TX = 0x03
 M_RX = 0x05
+M_RX_S = 0x06
 
 def setBW(bw):
     global _currentBW
@@ -31,6 +32,9 @@ def setCodingRate(cr):
 def setSF(sf):
     global _currentSF
     _currentSF = sf
+    if sf == 6:
+        print("Warning: need implicit header")
+        print("\tsee Section 4.1.1.2")
     setModemConfig2()
 
 def setModemConfig1():
