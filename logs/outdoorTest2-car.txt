@@ -1,0 +1,109 @@
+00:00:45 - ~~New Log Started: outdoorTest2~~
+00:00:45 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:01:03 - 4-3-21 car
+00:01:31 - Across the room - 4m
+00:01:39 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:01:51 -   Transmitted 'test message #0', duration = 47ms
+00:02:00 -   Transmitted 'test message #1', duration = 46ms
+00:02:07 -   Transmitted 'test message #2', duration = 47ms
+00:02:10 -   Transmitted 'test message #3', duration = 46ms
+00:02:17 -   Received: b'test message #0'
+00:02:18 -     RSSI: -60dBm
+00:02:21 -   Received: b'test message #1'
+00:02:22 -     RSSI: -59dBm
+00:02:24 -   Received: b'test message #2'
+00:02:24 -     RSSI: -60dBm
+00:02:26 -   Received: b'test message #3'
+00:02:26 -     RSSI: -60dBm
+00:04:49 - Desk to car - 40m
+00:04:57 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:05:16 -   Transmitted 'test message #4', duration = 47ms
+00:05:19 -   Transmitted 'test message #5', duration = 46ms
+00:05:21 -   Transmitted 'test message #6', duration = 47ms
+00:05:24 -   Transmitted 'test message #7', duration = 46ms
+00:05:50 -   Received: b'test message #4'
+00:05:50 -     RSSI: -78dBm
+00:05:52 -   Received: b'test message #5'
+00:05:52 -     RSSI: -79dBm
+00:05:55 -   Received: b'test message #6'
+00:05:55 -     RSSI: -80dBm
+00:05:58 -   Received: b'test message #7'
+00:05:58 -     RSSI: -80dBm
+00:06:05 -   BW: 500kHz, CR: 4/5, SF: 7, P: 17dBm
+00:06:28 -   Transmitted 'test message #8', duration = 12ms
+00:06:30 -   Transmitted 'test message #9', duration = 12ms
+00:06:39 -   Received: b'test message #8'
+00:06:39 -     RSSI: -77dBm
+00:06:42 -   Received: b'test message #9'
+00:06:42 -     RSSI: -78dBm
+00:06:49 -   BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+00:06:58 -   Transmitted 'test message #10', duration = 395ms
+00:07:03 -   Transmitted 'test message #11', duration = 395ms
+00:07:09 -   Received: b'test message #10'
+00:07:09 -     RSSI: -80dBm
+00:07:12 -   Received: b'test message #11'
+00:07:12 -     RSSI: -80dBm
+00:07:22 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm
+00:07:31 -   Transmitted 'test message #12', duration = 1450ms
+00:07:35 -   Transmitted 'test message #13', duration = 1451ms
+00:07:41 -   Received: b'test dessage #12'
+00:07:41 -     RSSI: -82dBm
+00:07:45 -   Received: b'test message #13'
+00:07:45 -     RSSI: -82dBm
+00:10:15 - Desk to leasing office - 140m
+00:10:33 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:10:38 -   Transmitted 'test message #14', duration = 52ms
+00:10:44 -   Transmitted 'test message #15', duration = 52ms
+00:10:49 -   Received: b'test message #14'
+00:10:49 -     RSSI: -104dBm
+00:10:51 -   Received: b'test message #15'
+00:10:51 -     RSSI: -103dBm
+00:10:57 -   BW: 500kHz, CR: 4/5, SF: 7, P: 17dBm
+00:11:03 -   Transmitted 'test message #16', duration = 13ms
+00:11:11 -   Transmitted 'test message #17', duration = 14ms
+00:11:22 -   Received: b'test message #16'
+00:11:22 -     RSSI: -99dBm
+00:11:26 -   Received: b'test message #17'
+00:11:26 -     RSSI: -99dBm
+00:11:33 -   BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+00:11:37 -   Transmitted 'test message #18', duration = 396ms
+00:11:53 -   Transmitted 'test message #19', duration = 395ms
+00:12:00 -   Transmitted 'test message #20', duration = 395ms
+00:12:06 -   Transmitted 'test message #21', duration = 395ms
+00:12:12 -   Received: b'test message #18'
+00:12:12 -     RSSI: -103dBm
+00:12:16 -   Received: b'test message #19'
+00:12:16 -     RSSI: -103dBm
+00:12:22 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm
+00:12:30 -   Transmitted 'test message #22', duration = 1450ms
+00:12:35 -   Transmitted 'test message #23', duration = 1451ms
+00:12:44 -   Received: b'test message #20'
+00:12:44 -     RSSI: -104dBm
+00:12:48 -   Received: b'test message #21'
+00:12:48 -     RSSI: -103dBm
+00:15:13 - Desk to Mill Rd merge - 370m
+00:15:30 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:15:35 -   Transmitted 'test message #24', duration = 52ms
+00:15:44 -   Transmitted 'test message #25', duration = 52ms
+00:15:48 -   Transmitted 'test message #26', duration = 52ms
+00:15:52 -   Transmitted 'test message #27', duration = 51ms
+00:16:27 -   BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+00:16:42 -   BW: 500kHz, CR: 4/5, SF: 7, P: 17dBm
+00:16:52 -   Transmitted 'test message #28', duration = 13ms
+00:16:57 -   Transmitted 'test message #29', duration = 13ms
+00:17:14 -   BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+00:17:18 -   Transmitted 'test message #30', duration = 395ms
+00:17:23 -   Transmitted 'test message #31', duration = 396ms
+00:17:28 -   Transmitted 'test message #32', duration = 395ms
+00:17:31 -   Transmitted 'test message #33', duration = 396ms
+00:17:59 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm
+00:18:06 -   Transmitted 'test message #34', duration = 1451ms
+00:18:12 -   Transmitted 'test message #35', duration = 1451ms
+00:18:16 -   Transmitted 'test message #36', duration = 1451ms
+00:18:27 -   Received: b'test messai5 #3s'
+00:18:27 -     RSSI: -107dBm
+00:19:05 -   Transmitted 'test message #37', duration = 1450ms
+00:19:19 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm
+00:19:35 -   Transmitted 'test message #38', duration = 1450ms
+00:19:50 -   Transmitted 'test message #39', duration = 1450ms
+00:20:02 -   Transmitted 'test message #40', duration = 1450ms
