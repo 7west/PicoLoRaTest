@@ -103,7 +103,7 @@
 00:18:27 -   Received: b'test messai5 #3s'
 00:18:27 -     RSSI: -107dBm
 00:19:05 -   Transmitted 'test message #37', duration = 1450ms
-00:19:19 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm
+00:19:19 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm *added Boost
 00:19:35 -   Transmitted 'test message #38', duration = 1450ms
 00:19:50 -   Transmitted 'test message #39', duration = 1450ms
 00:20:02 -   Transmitted 'test message #40', duration = 1450ms

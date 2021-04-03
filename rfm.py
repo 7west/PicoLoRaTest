@@ -58,6 +58,7 @@ def setPout(pout):
         print("Power must be between +2dBm and +17dBm")
 
 def setBoostPower(bp):
+    global _currentBP
     _currentBP = bp
     if bp == False:
         spiX.write(0x4D, 0x84)

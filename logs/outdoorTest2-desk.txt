@@ -100,7 +100,7 @@
 00:22:15 -   Transmitted 'test message #33', duration = 1450ms
 00:22:29 -   Transmitted 'test message #34', duration = 1451ms
 00:22:37 -   Transmitted 'test message #35', duration = 1451ms
-00:23:02 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm
+00:23:02 -   BW: 125kHz, CR: 4/8, SF: 12, P: 17dBm *added Boost
 00:23:14 -   Received: b'test=hessaj\xd4##\xd3H'
 00:23:14 -     RSSI: -106dBm
 00:23:50 -   Transmitted 'test message #36', duration = 1450ms
