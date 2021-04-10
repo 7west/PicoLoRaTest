@@ -1,0 +1,95 @@
+00:00:45 - ~~New Log Started: camilleAptTest1~~
+00:00:45 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:01:20 - 4-4-21 apt
+00:01:35 - Apt to front of building - 20 m
+00:01:44 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:10:31 -   Received: b'test message #0'
+00:10:31 -     RSSI: -82dBm
+00:10:35 -   Received: b'test message #1'
+00:10:35 -     RSSI: -80dBm
+00:10:39 -   Received: b'test message #2'
+00:10:39 -     RSSI: -82dBm
+00:10:41 -   Received: b'test message #3'
+00:10:41 -     RSSI: -81dBm
+00:10:49 -   Transmitted 'test message #0', duration = 47ms
+00:10:52 -   Transmitted 'test message #1', duration = 47ms
+00:10:54 -   Transmitted 'test message #2', duration = 47ms
+00:10:56 -   Transmitted 'test message #3', duration = 46ms
+00:11:14 -   BW: 500kHz, CR: 4/5, SF: 7, P: 17dBm
+00:11:28 -   Received: b'test message #4'
+00:11:28 -     RSSI: -79dBm
+00:11:37 -   Received: b'test message #5'
+00:11:37 -     RSSI: -81dBm
+00:11:39 -   Received: b'test message #6'
+00:11:39 -     RSSI: -81dBm
+00:11:41 -   Received: b'test message #7'
+00:11:41 -     RSSI: -81dBm
+00:11:46 -   Transmitted 'test message #4', duration = 12ms
+00:11:51 -   Transmitted 'test message #5', duration = 12ms
+00:11:53 -   Transmitted 'test message #6', duration = 11ms
+00:11:55 -   Transmitted 'test message #7', duration = 12ms
+00:12:48 - Apt to Jamieson Ave - 230m
+00:13:12 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:15:58 -   Transmitted 'test message #8', duration = 47ms
+00:16:01 -   Transmitted 'test message #9', duration = 47ms
+00:16:04 -   Transmitted 'test message #10', duration = 52ms
+00:16:07 -   Transmitted 'test message #11', duration = 52ms
+00:16:10 -   Received: b'test message #4'
+00:16:10 -     RSSI: -93dBm
+00:16:13 -   Received: b'test message #5'
+00:16:13 -     RSSI: -95dBm
+00:16:21 -   BW: 500kHz, CR: 4/5, SF: 7, P: 17dBm
+00:16:24 -   Received: b'test message #6'
+00:16:24 -     RSSI: -93dBm
+00:16:29 -   Received: b'test message #7'
+00:16:29 -     RSSI: -94dBm
+00:16:31 -   Received: b'test message #8'
+00:16:31 -     RSSI: -93dBm
+00:16:33 -   Received: b'test message #9'
+00:16:33 -     RSSI: -93dBm
+00:16:36 -   Transmitted 'test message #12', duration = 13ms
+00:16:43 -   Transmitted 'test message #13', duration = 13ms
+00:16:45 -   Transmitted 'test message #14', duration = 14ms
+00:16:47 -   Transmitted 'test message #15', duration = 13ms
+00:16:54 -   BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+00:16:58 -   Received: b't\x05~t kc@sa7\x06*\x83w:'
+00:16:58 -     RSSI: -103dBm
+00:17:02 -   Received: b'test message #11'
+00:17:02 -     RSSI: -94dBm
+00:17:06 -   Received: b'test message #12'
+00:17:06 -     RSSI: -95dBm
+00:17:09 -   Received: b'test message #13'
+00:17:09 -     RSSI: -95dBm
+00:17:14 -   Transmitted 'test message #16', duration = 395ms
+00:17:16 -   Transmitted 'test message #17', duration = 395ms
+00:17:18 -   Transmitted 'test message #18', duration = 396ms
+00:17:20 -   Transmitted 'test message #19', duration = 396ms
+00:17:43 - Apt to opposit of cemetery - 500m
+00:17:47 -   BW: 125kHz, CR: 4/5, SF: 7, P: 17dBm
+00:24:50 -   Received: b'test message #0'
+00:24:50 -     RSSI: -115dBm
+00:24:54 -   Received: b'test message #1'
+00:24:54 -     RSSI: -116dBm
+00:24:57 -   Received: b'test message #2'
+00:24:57 -     RSSI: -116dBm
+00:24:59 -   Received: b'test message #3'
+00:24:59 -     RSSI: -117dBm
+00:25:04 -   Transmitted 'test message #20', duration = 52ms
+00:25:06 -   Transmitted 'test message #21', duration = 52ms
+00:25:08 -   Transmitted 'test message #22', duration = 52ms
+00:25:14 -   Transmitted 'test message #23', duration = 51ms
+00:25:22 -   BW: 500kHz, CR: 4/5, SF: 7, P: 17dBm
+00:26:03 -   Transmitted 'test message #24', duration = 14ms
+00:26:05 -   Transmitted 'test message #25', duration = 13ms
+00:26:09 -   Transmitted 'test message #26', duration = 13ms
+00:26:23 -   BW: 125kHz, CR: 4/7, SF: 10, P: 17dBm
+00:26:54 -   Transmitted 'test message #27', duration = 396ms
+00:26:57 -   Transmitted 'test message #28', duration = 395ms
+00:27:00 -   Transmitted 'test message #29', duration = 395ms
+00:27:02 -   Transmitted 'test message #30', duration = 395ms
+00:27:08 -   Received: b'test message #11'
+00:27:08 -     RSSI: -115dBm
+00:27:11 -   Received: b'test message #12'
+00:27:11 -     RSSI: -116dBm
+00:27:14 -   Received: b'test message #13'
+00:27:14 -     RSSI: -116dBm

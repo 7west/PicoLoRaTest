@@ -3,7 +3,7 @@
 
 import replCmd
 
-replCmd.init(8)
+replCmd.init(12)
 print("Select file (do NOT include 'txt'):")
 print("  " + replCmd.cmd("os.listdir()"))
 reqFile = input() + ".txt"
